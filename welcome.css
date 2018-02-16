@@ -1,4 +1,5 @@
 ﻿body {
+    background-color: gray;
     font-family: 'PT Sans', sans-serif;
     padding:0px;
     margin:0px;
@@ -6,8 +7,6 @@
 }
 
 #screen {
-    background-image: url("Background.jpg");
-    background-repeat: no-repeat;
     width:100%;
     height 100%;
 }
