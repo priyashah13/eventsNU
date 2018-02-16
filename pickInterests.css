@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+body{
+    width: auto;
+    height: 100%;
+}
+.flexin-daddy-wrapper{
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-right: 0%;
+    margin-left: 40%;
+}
+.flexin-wrapper{
+    display: flex;
+    flex-direction:row;
+}
+
+.col-flex-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+#title{
+    font-family: 'PT sans',sans-serif;
+    margin-top: 10%;
+
+    margin-left:36.5%;
+}
+
+.topic{
+    font-family: 'Pt sans', serif;
+    margin: 0;
+    background: white;
+}
+
+.topic p{
+    display: inline-block;
+}
+
+.onwards-link{
+    margin-top: 15%;
+    margin-left: 25%;
+}
+
+.onwards-link a{
+    text-decoration: none;
+    font-family: 'PT Sans',sans-serif;
+    border: 1px solid black;
+    padding: 1%;
+    margin-top: 40%;
+}
