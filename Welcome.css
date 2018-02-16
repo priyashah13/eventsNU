@@ -13,6 +13,7 @@
 }
 
 .head-bar {
+    width: 100%;
     background-color: purple;
     opacity: .8;
     color: whitesmoke;
