@@ -51,6 +51,7 @@ body{
     padding: 1%;
     margin-top: 40%;
 }
+
 <!--- signup sheet -----!>
 
 .container {
@@ -85,6 +86,18 @@ h1 {
 h1, input {
     font-family: 'PT sans',sans-serif;
     font-size: 100%;
+  }
+
+a {
+    width: 75%;
+    text-decoration: none;
+  }
+
+h2 {
+    padding-top: 10px;
+    font-size: 100%;
+    font-family: 'PT sans', sans-serif;
+    text-align: center;
   }
 
 .input {
