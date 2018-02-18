@@ -1,6 +1,4 @@
-/* #checkbox p{
-    display: inline-block;
-} */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
 
 body{
     overflow-x: hidden;
@@ -39,7 +37,11 @@ body{
 .panel.panel-default{
     width: 150%;
 }
-/* w3schools */
+
+.panel-title{
+    line-height: 1.5;
+}
+
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 160px; /* Set the width of the sidebar */
@@ -51,15 +53,23 @@ body{
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     margin-top: 55px;
+    font-family: 'PT Sans',sans-serif;
 }
-
+.sidenav ul{
+    list-style: none;
+    font-size: 3vmin;
+    margin: 0;
+}
 /* The navigation menu links */
-.sidenav a {
+.sidenav h2 {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
+    font-family: 'PT Sans',sans-serif;
     font-size: 25px;
     color: #818181;
     display: block;
+    font-size: 5vmin;
+    margin-top: 0;
 }
 
 /* When you mouse over the navigation links, change their color */

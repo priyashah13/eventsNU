@@ -3,8 +3,7 @@
 <!-- bootstrap-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- polaris -->
-<link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/latest/polaris.css" />
+
 <link rel="stylesheet" href="eventsList.css">
 <html>
 <head>
@@ -12,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="eventsList.css"/>
 </head>
 <body>
-    <!-- navbar -->
+    <!-- top navbar -->
     <nav class = "navbar navbar-default">
         <div class = "container-fluid">
 
@@ -27,24 +26,24 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a style="display:inline-flex; padding-right:30px;" href="#"><span class="material-icons">account_box</span>My Profile</a></li>
                 </ul>
+                <!-- search-bar -->
+                <div class="col-sm-3 col-md-3 pull-right">
+                    <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
             </div>
-
-            <!-- menu items -->
-            <!-- <div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#"> Home</a></li>
-                    <li><a href="#"> Post Event</a></li>
-                    <li><a href = '#'>My eventsNU</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a style="display:inline-flex" href="#"><span class="material-icons">account_box</span>My Profile</a></li>
-                </ul>
-            </div> -->
-        </nav>
-
+        </div>
+    </nav>
+    <!-- sidenav -->
         <div class="sidenav">
             <div class="tags-menu">
-                <a href="#">Tags</a>
+                <h2>Tags</h2>
                 <ul>
                     <li><input class="checkBox" type="checkbox">   Math</li>
                     <li><input class="checkBox" type="checkbox">   Theater</li>
@@ -54,11 +53,11 @@
                     <li><input class="checkBox" type="checkbox">   Music</li>
                 </ul>
             </div>
-          <a href="#">Calendar</a>
+          <h2>Calendar<h2>
         </div>
 
     <div class="event-container">
-        <!-- Top Row -->
+        <!-- Top Row of Events-->
         <div class="row" >
             <div class="col-lg-2 pull-right pull-up" style="margin-right:10%;">
                 <div class="panel panel-default">
@@ -66,7 +65,8 @@
                         <h1 class="panel-title">NU Bhangra Tryouts</h1>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <img class="img-responsive img-rounded" src="https://static.vecteezy.com/system/resources/previews/000/141/869/non_2x/bright-bhangra-colorful-dancer-vectors.jpg">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="panel-footer">
                         <a href="#">More Info</a>
@@ -79,7 +79,8 @@
                             <h1 class="panel-title">Speaker Series: Economics</h1>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <img class="img-responsive img-rounded" src="https://www.learnliberty.org/media/badges/basic-economics/standard.png">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="panel-footer">
                         <a href="#">More Info</a>
@@ -92,7 +93,8 @@
                         <h1 class="panel-title">Cake Baking!</h1>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <img class="img-responsive img-rounded" src="http://finedininglovers.cdn.crosscast-system.com/ImageAlbum/16951/original_Baking-Utensils.jpg">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="panel-footer">
                         <a href="#">More Info</a>
@@ -100,7 +102,7 @@
                 </div>
             </div>
         </div>
-        <!-- Bottom Row -->
+        <!-- Bottom Row of Events -->
         <div class="row" >
             <div class="col-lg-2 pull-right pull-down" style="margin-right:10%;">
                 <div class="panel panel-default">
@@ -108,7 +110,8 @@
                         <h1 class="panel-title">Wine and Cheese Nights</h1>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <img class="img-responsive img-rounded" src="https://www.bonappetour.com/assets/images/experiences/1499331866-5980868.jpeg">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="panel-footer">
                         <a href="#">More Info</a>
@@ -118,10 +121,11 @@
             <div class="col-lg-2 pull-right"style="margin-right:10%;">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                            <h1 class="panel-title">Speaker Series: Mathematics in Theater</h1>
+                            <h1 class="panel-title">Speaker Series: Mathematics in Art</h1>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <img class="img-responsive img-rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdHM4nXXa0gwXt1nY0kFOujKayXm_5XKhCACQ-uZVtdZ1Mett">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="panel-footer">
                         <a href="#">More Info</a>
@@ -134,7 +138,8 @@
                         <h1 class="panel-title">Dance the Polka!</h1>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <img class="img-responsive img-rounded" src="https://static01.nyt.com/images/2007/11/29/arts/polkaspan.jpg">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="panel-footer">
                         <a href="#">More Info</a>
