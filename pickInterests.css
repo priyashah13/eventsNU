@@ -152,20 +152,6 @@ h2 {
         outline: none;
     }
 
-.button {
-  position: relative;
-  width: 85%;
-  height: 50px;
-  display: block;
-  margin: 30px auto 30px;
-  color: purple;
-  background-color: white;
-  border: 1px black solid;
-  -webkit-box-shadow: 0 5px 0 #dcdcdc;
-  -moz-box-shadow: 0 5px 0 #dcdcdc;
-  box-shadow: 0 5px 0 #dcdcdc;
-}
-
 <!--- pickinterests --!>
 
 .box {
