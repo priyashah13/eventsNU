@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post an event.</title>
+    <link rel="stylesheet" type="text/css" href="pickInterests.css"/>
+</head>
+
+<body>
+    <div class = "title">
+        <h1>Post an event!</h1>
+    </div>
+
+
+<div class="container" >
+    <div class="col-md-6" >
+        <div id="logbox"  >
+            <form target="invisible" id="signup" method="post" action="/signup.php">
+
+                <input name="event[name]" type="name" placeholder="Event Name" class="input pass"/>
+		<input name="event[date]" type="date" placeholder="Date" title="Only Northwestern email address" class="input pass"/>
+                <input name="event[time]" type="" placeholder="Time" required="required" title="Min: 4, Max: 10" minlength="4" maxlength="10" class="input pass"/>
+                <input name="event[location]" type="location" placeholder="Location" required="required" class="input pass"/>
+
+                  <a href="#" class="uploadButton"><h2>Upload Flyer</h2></a>
+
+
+		    <a href="#" onclick = "confirmAlert()" class="inputButton"><h2>Post Event!</h2></a>
+
+        <script>
+          function confirmAlert() {
+            alert("Your event has been submitted, it will appear after it has been approved. We will notify you by email");
+          }
+      </script>
+            </form>
+        </div>
+    </div>
+
+</div>
