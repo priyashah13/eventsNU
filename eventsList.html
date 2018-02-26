@@ -1,156 +1,123 @@
 <!DOCTYPE html>
 
-<!-- bootstrap-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<link rel="stylesheet" href="EventsList.css">
 
-<link rel="stylesheet" href="eventsList.css">
 <html>
-<head>
-    <title>Events</title>
-    <link rel="stylesheet" type="text/css" href="eventsList.css"/>
-</head>
+<title>eventsNU - Event List</title>
 <body>
-    <!-- top navbar -->
-    <nav class = "navbar navbar-default">
-        <div class = "container-fluid">
 
-            <!-- logo -->
-            <div class="nav navbar-header navbar-fixed-top" style="padding-left: 10px;">
-                <a href="#" class="navbar-brand">eventsNU</a>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#"> Home</a></li>
-                    <li><a href="postEvent.html"> Post Event</a></li>
-                    <li><a href = '#'>My eventsNU</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a style="display:inline-flex; padding-right:30px;" href="#"><span class="material-icons">account_box</span>My Profile</a></li>
-                </ul>
-                <!-- search-bar -->
-                <div class="col-sm-3 col-md-3 pull-right">
-                    <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="q">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- sidenav -->
-        <div class="sidenav">
-            <div class="tags-menu">
-                <h2>Tags</h2>
-                <ul>
-                    <li><input class="checkBox" type="checkbox">   Math</li>
-                    <li><input class="checkBox" type="checkbox">   Theater</li>
-                    <li><input class="checkBox" type="checkbox">   Economics</li>
-                    <li><input class="checkBox" type="checkbox">   Dance</li>
-                    <li><input class="checkBox" type="checkbox">   Food</li>
-                    <li><input class="checkBox" type="checkbox">   Music</li>
-                </ul>
-            </div>
-            <div>
-                <h2>Calendar<h2>
-                <img class="img-responsive" src="http://february2018calendar.info/wp-content/uploads/2018/01/1.jpg">
-            </div>
-        </div>
+<div class="navbar-fixed">
+<nav class="purple lighten-1">
+    <div class = "nav-wrapper container">
+        <!-- logo -->
+        <a href="#" class="brand-logo"><i class="large material-icons">dashboard</i>eventsNU</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="#"><i class="material-icons">home</i></a></li>
+                <li><a href="postEvent.html">Post Event</a></li>
+                <li><a href ="#">My eventsNU</a></li>
+            </ul>
+    </div>
+</nav>
+</div>
+<!-- sidenav -->
+<div class="tags-sidenav">
+    <h4>Filters</h4>
+        <p>
+            <input type="checkbox" class="filled-in" id="Economics"/>
+            <label for="Economics">Economics</label>
+        </p>
+        <p>
+            <input type="checkbox" class="filled-in" id="Science"/>
+            <label for="Science">Science</label>
+        </p>
+        <p>
+            <input type="checkbox" class="filled-in" id="Dance" />
+            <label for="Dance">Dance</label>
+        </p>
+        <p>
+            <input type="checkbox" class="filled-in" id="Art" />
+            <label for="Art">Art</label>
+        </p>
+        <p>
+            <input type="checkbox" class="filled-in" id="Music" />
+            <label for="Music">Music</label>
+        </p>
+</div>
 
-    <div class="event-container">
-        <!-- Top Row of Events-->
-        <div class="row" >
-            <div class="col-lg-2 pull-right pull-up" style="margin-right:10%;">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1 class="panel-title">NU Bhangra Tryouts</h1>
-                    </div>
-                    <div class="panel-body">
-                        <img class="img-responsive img-rounded" src="https://static.vecteezy.com/system/resources/previews/000/141/869/non_2x/bright-bhangra-colorful-dancer-vectors.jpg">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                    <div class="panel-footer">
-                        <a href="#">More Info</a>
-                    </div>
-                </div>
+<div class="container">
+    <div class="row">
+       <div class="col s4 m4">
+           <div class="card small hoverable">
+              <div class="card-image">
+                <img src="http://finedininglovers.cdn.crosscast-system.com/ImageAlbum/16951/original_Baking-Utensils.jpg">
+              </div>
+              <div class="card-content">
+                  <span class="card-title grey-text text-darken-4">Cake Baking!<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+                <p><a href="#">Explore!</a></p>
+              </div>
             </div>
-            <div class="col-lg-2 pull-right"style="margin-right:10%;">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                            <h1 class="panel-title">Speaker Series: Economics</h1>
-                    </div>
-                    <div class="panel-body">
-                        <img class="img-responsive img-rounded" src="https://www.learnliberty.org/media/badges/basic-economics/standard.png">
-                    </div>
-                    <div class="panel-footer">
-                        <a href="#">More Info</a>
-                    </div>
+       </div>
+           <div class="col s4 m4">
+               <div class="card small hoverable">
+                  <div class="card-image">
+                    <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAASJAAAAJDY1ODIxOTBmLTNhN2QtNDUzZi1hMjhlLTVmOWIwMTdmZWNhYw.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">Speaker Series:<a href='#'><i class="material-icons right three-dots">more_vert</i></a> Economics</span>
+                    <p><a href="#">Explore!</a></p>
+                  </div>
                 </div>
-            </div>
-            <div class="col-lg-2 pull-right"style="margin-right:10%;">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1 class="panel-title">Cake Baking!</h1>
-                    </div>
-                    <div class="panel-body">
-                        <img class="img-responsive img-rounded" src="http://finedininglovers.cdn.crosscast-system.com/ImageAlbum/16951/original_Baking-Utensils.jpg">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                    <div class="panel-footer">
-                        <a href="#">More Info</a>
-                    </div>
+           </div>
+           <div class="col s4 m4">
+               <div class="card small hoverable">
+                  <div class="card-image">
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/141/869/non_2x/bright-bhangra-colorful-dancer-vectors.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">NU Bhangra Tryouts<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+                    <p><a href="#">Explore!</a></p>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <!-- Bottom Row of Events -->
-        <div class="row" >
-            <div class="col-lg-2 pull-right pull-down" style="margin-right:10%;">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1 class="panel-title">Wine and Cheese Nights</h1>
+           </div>
+         </div>
+         <!-- row 2 -->
+         <div class="row">
+             <div class="col s4 m4">
+                 <div class="card small hoverable">
+                    <div class="card-image">
+                      <img src="https://www.bonappetour.com/assets/images/experiences/1499331866-5980868.jpeg">
                     </div>
-                    <div class="panel-body">
-                        <img class="img-responsive img-rounded" src="https://www.bonappetour.com/assets/images/experiences/1499331866-5980868.jpeg">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="card-content">
+                      <span class="card-title grey-text text-darken-4">Wine & Cheese Night<a href='#'><i class="material-icons right three-dots">more_vert</i></a></span>
+                      <p><a href="#">Explore!</a></p>
                     </div>
-                    <div class="panel-footer">
-                        <a href="#">More Info</a>
+                  </div>
+             </div>
+             <div class="col s4 m4">
+                 <div class="card small hoverable">
+                    <div class="card-image">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdHM4nXXa0gwXt1nY0kFOujKayXm_5XKhCACQ-uZVtdZ1Mett">
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-2 pull-right"style="margin-right:10%;">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                            <h1 class="panel-title">Speaker Series: Mathematics in Art</h1>
+                    <div class="card-content">
+                      <span class="card-title grey-text text-darken-4">Speaker Series: <a href='#'><i class="material-icons right three-dots">more_vert</i></a>Mathematics in Art</span>
+                      <p><a href="#">Explore!</a></p>
                     </div>
-                    <div class="panel-body">
-                        <img class="img-responsive img-rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdHM4nXXa0gwXt1nY0kFOujKayXm_5XKhCACQ-uZVtdZ1Mett">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+             </div>
+             <div class="col s4 m4">
+                 <div class="card small hoverable">
+                    <div class="card-image">
+                      <img src="https://i.ytimg.com/vi/Dbu4oKahSLw/maxresdefault.jpg">
                     </div>
-                    <div class="panel-footer">
-                        <a href="#">More Info</a>
+                    <div class="card-content">
+                      <span class="card-title grey-text text-darken-4">Dance the Polka!<a href='#'><i class="material-icons right three-dots">more_vert</i></a></span>
+                      <p><a href="#">Explore!</a></p>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-2 pull-right"style="margin-right:10%;">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1 class="panel-title">Dance the Polka!</h1>
-                    </div>
-                    <div class="panel-body">
-                        <img class="img-responsive img-rounded" src="https://static01.nyt.com/images/2007/11/29/arts/polkaspan.jpg">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                    <div class="panel-footer">
-                        <a href="#">More Info</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- jQuery CDN -->
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <!-- Bootstrap Js CDN -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                  </div>
+             </div>
+              </div>
+       </div>
 </body>
+ </html>

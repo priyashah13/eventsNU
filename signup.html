@@ -1,28 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Create an account</title>
-    <link rel="stylesheet" type="text/css" href="pickInterests.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>eventsNU - Sign Up</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
 </head>
-
 <body>
-    <div class = "title">
-        <h1>Sign Up!</h1>
+  <!--navbar-->
+  <nav class="purple lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo"><i class="large material-icons">dashboard</i>eventsNU</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Log in</a></li>
+      </ul>
     </div>
+  </nav>
+<!--navbar-->
 
-
-<div class="container" >
-    <div class="col-md-6" >
-        <div id="logbox"  >
-            <form target="invisible" id="signup" method="post" action="/signup.php">
-                <h1>Create an Account</h1>
-                <input name="user[name]" type="name" placeholder="Full Name" class="input pass"/>
-		<input name="user[email]" type="email" placeholder="Northwestern Email address" pattern=".+@u.northwestern.edu" title="Only Northwestern email address" class="input pass"/>
-                <input name="user[password]" id="password" type="password" placeholder="Choose a password" required="required" title="Min: 4, Max: 10" minlength="4" maxlength="10" class="input pass"/>
-                <input name="user[password2]" id="confirm_password" type="password" placeholder="Confirm password" required="required" class="input pass"/>
-		    <a href="pickInterests.html" class="inputButton"><h2>Submit!</h2></a>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h2 class="header center black-text">Create an account</h2>
+      <br>
+        <div class="row">
+          <div class="col s3">
+          </div>
+            <form class="col s6" action="pickInterests.html">
+              <div class="row center">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="first_name" type="text" class="validate" required="true">
+                  <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate" required="true">
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+              <div class="row center">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" class="validate" required="true">
+                  <label for="email" data-error="please enter valid email address">Email</label>
+                </div>
+              </div>
+              <div class="row center">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">lock</i>
+                  <input id="password" type="password" class="validate" required="true">
+                  <label for="password">Password</label>
+                </div>
+              </div>
+              <div class="row center">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
             </form>
+            <div class="col s3">
+            </div>
         </div>
+      <br>
+      <br>
     </div>
+  </div>
 
-</div>
+
+  <footer class="page-footer purple lighten-1">
+    <div class="footer-copyright">
+      <div class="container">
+      Northwestern University
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

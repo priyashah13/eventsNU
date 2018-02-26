@@ -1,84 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
 
-body{
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
 
-.sidebar-wrapper{
-    width: 35%;
-    margin: 0 !important;
-    border: 0;
-}
-.sidebar-navigate{
-    width: 50% !important;
-    margin: 0 !important;
-    border: 0;
+.tags-sidenav {
+    width: 100px;
+    margin-right:0;
+    display: inline-block;
+    margin-left: 2%;
+    float: left;
+    width: 120px;
+    position: fixed;
 }
 
-.checkBox{
-    margin: 0;
+.three-dots {
+    color: Gray;
 }
-
-.tag-list li{
-    margin: 0 !important;
-}
-
-#sidebar{
-    width: 50% !important;
-    margin: 0 !important;
-}
-
-.event-container{
-    margin-left: 160px;
-    margin-right: 160px;
-}
-
-.panel.panel-default{
-    width: 150%;
-}
-
-.panel-title{
-    line-height: 1.5;
-}
-
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 250px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #f8f8f8; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    margin-top: 55px;
-    font-family: 'PT Sans',sans-serif;
-}
-.sidenav ul{
-    list-style: none;
-    font-size: 3vmin;
-    margin: 0;
-}
-/* The navigation menu links */
-.sidenav h2 {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-family: 'PT Sans',sans-serif;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    font-size: 5vmin;
-    margin-top: 0;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-/* Style page content */
-.main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+.three-dots:hover {
+    color: black;
 }

@@ -1,38 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Post an event.</title>
-    <link rel="stylesheet" type="text/css" href="pickInterests.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>eventsNU - Post event</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen, projection"/>
+
 </head>
-
 <body>
-    <div class = "title">
-        <h1>Post an event!</h1>
+  <!--navbar-->
+  <nav class="purple lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo"><i class="large material-icons">dashboard</i>eventsNU</a>
     </div>
+  </nav>
+<!--navbar-->
 
-
-<div class="container" >
-    <div class="col-md-6" >
-        <div id="logbox"  >
-            <form target="invisible" id="signup" method="post" action="/signup.php">
-
-                <input name="event[name]" type="name" placeholder="Event Name" class="input pass"/>
-		<input name="event[date]" type="date" placeholder="Date" title="Only Northwestern email address" class="input pass"/>
-                <input name="event[time]" type="" placeholder="Time" required="required" title="Min: 4, Max: 10" minlength="4" maxlength="10" class="input pass"/>
-                <input name="event[location]" type="location" placeholder="Location" required="required" class="input pass"/>
-
-                  <a href="#" class="uploadButton"><h2>Upload Flyer</h2></a>
-
-
-		    <a href="#" onclick = "confirmAlert()" class="inputButton"><h2>Post Event!</h2></a>
-
-        <script>
-          function confirmAlert() {
-            alert("Your event has been submitted, it will appear after it has been approved. We will notify you by email");
-          }
-      </script>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h2 class="header center black-text">Post new event!</h2>
+        <div class="row">
+          <div class="col s3">
+          </div>
+            <form class="col s6" action="feedback.html">
+              <div class="row center">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">local_activity</i>
+                  <input id="event_name" type="text" required="true">
+                  <label for="event_name">Event Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">place</i>
+                  <input type="text" id="place" required="true">
+                  <label for="place">Location</date>
+                </div>
+              </div>
+                <div class="row center">
+                  <div class="input-field col s6">
+                    <i class="material-icons prefix">event</i>
+                    <input type="text" class="datepicker" id="date" required="true">
+                    <label for="date">Date</date>
+                  </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">access_time</i>
+                  <input type="text" class="timepicker" id="time" required="true">
+                  <label for="time">Time</label>
+                </div>
+              </div>
+              <div class="row center">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">description</i>
+                  <input id="description" type="text">
+                  <label for="description">Brief Description (Optional)</label>
+                </div>
+              </div>
+              <div class="row center">
+                <div class="file-field input-field col s12">
+                  <input type="file" required="true">
+                  <div class="file-path-wrapper">
+                    <i class="material-icons prefix">add_circle</i>
+                    <input class="file-path validate" type="text" id="fileUpload">
+                    <label for="fileUpload">Upload Flyer</label>
+                  </div>
+              </div>
+            </div>
+              <div class="row center">
+              <button class="btn waves-effect waves-light" type="submit" onclick="modal" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
             </form>
+            <div class="col s3">
+            </div>
         </div>
     </div>
+  </div>
 
-</div>
+
+  <footer class="page-footer purple lighten-1">
+    <div class="footer-copyright">
+      <div class="container">
+      Northwestern University
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="postEvent.js"></script>
+
+  </body>
+</html>

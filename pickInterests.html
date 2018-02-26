@@ -1,45 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Success!</title>
-    <link rel="stylesheet" type="text/css" href="pickInterests.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>eventsNU - Welcome</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 </head>
 <body>
-    <div class = "title">
-        <h1>Success! Your account has been created</h1>
+  <!--navbar-->
+  <nav class="purple lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo"><i class="large material-icons">dashboard</i>eventsNU</a>
     </div>
+  </nav>
 
-
-<div class="container" >
-    <div class="col-md-6" >
-        <div id="logbox"  >
-            <form id="signup" method="post" action="/signup" >
-                <h1>Please tell us more about your interests so we can show you events you'll love!</h1>
-                  <div class="box">
-                    <label class="selectors">Economics
-                      <input type="checkbox">
-                      <span class="mark"></span>
-                    </label>
-                    <label class="selectors">Science
-                      <input type="checkbox">
-                      <span class="mark"></span>
-                    </label>
-                    <label class="selectors">Dance
-                      <input type="checkbox" >
-                      <span class="mark"></span>
-                    </label>
-                    <label class="selectors">Art
-                      <input type="checkbox">
-                      <span class="mark"></span>
-                    </label>
-                    <label class="selectors">Music
-                      <input type="checkbox">
-                      <span class="mark"></span>
-                    </label>
-                  </div>
-                  <a class="inputButton" href="eventsList.html"><h2>Show me cool events!</h2></a>
+  <!--navbar-->
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h2 class="header center black-text">Tell us about your interests</h2>
+      <h5 class="center grey-text">Pick as many as you like</h5>
+      <br>
+        <div class="row center">
+          <div class="col s5">
+          </div>
+            <form class="col s4" action="eventsList.html">
+                <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box1"/>
+                <label class="black-text" for="filled-in-box1">Economics</label>
+              </p>
+              <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box2"/>
+                <label class="black-text" for="filled-in-box2">Science</label>
+              </p>
+              <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box3"/>
+                <label class="black-text" for="filled-in-box3">Dance</label>
+              </p>
+              <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box4"/>
+                <label class="black-text" for="filled-in-box4">Art</label>
+              </p>
+              <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box5"/>
+                <label class="black-text" for="filled-in-box5">Music</label>
+              </p>
+            </div>
+            <br>
+              <div class="row center">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Show events!
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
             </form>
+            <div class="col s4">
+            </div>
         </div>
+      <br>
+      <br>
     </div>
+  </div>
+  <br>
+  <br>
 
-</div>
+
+  <!--footer-->
+  <footer class="page-footer purple lighten-1">
+    <div class="footer-copyright">
+      <div class="container">
+      Northwestern University
+      </div>
+    </div>
+  </footer>
+
+
+  <!--scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
