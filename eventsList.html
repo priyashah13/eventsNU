@@ -2,122 +2,298 @@
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-<link rel="stylesheet" href="eventsList.css">
+<link rel="stylesheet" href="EventsList.css">
 
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+/* Center website */
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+
+#myBtnContainer{
+  float: left;
+  font-size: 15px;
+  margin-bottom: 1%;
+}
+
+.label {
+  align-items: center;
+  margin-bottom: 5%;
+  margin-top: 10%;
+}
+
+.btn {
+  width: 150px;
+  align-items: center;
+  margin-bottom: 5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  color: white;
+}
+</style>
+</head>
+
+<!-- MAIN (Center website) -->
 <title>eventsNU - Event List</title>
 <body>
 
-<div class="navbar-fixed">
-<nav class="purple lighten-1">
-    <div class = "nav-wrapper container">
+  <div class="navbar-fixed">
+    <nav class="purple lighten-1">
+      <div class = "nav-wrapper container">
         <!-- logo -->
         <a href="#" class="brand-logo"><i class="large material-icons">dashboard</i>eventsNU</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="active"><a href="#"><i class="material-icons">home</i></a></li>
+                <li class="active"><a href="eventsList.html"><i class="material-icons">home</i></a></li>
                 <li><a href="postEvent.html">Post Event</a></li>
-                <li><a href ="#">My eventsNU</a></li>
+                <li><a href ="index.html">Log Out</a></li>
             </ul>
-    </div>
-</nav>
-</div>
-<!-- sidenav -->
+          </div>
+    </nav>
+  </div>
+
 <div class="tags-sidenav">
-    <h4>Filters</h4>
-        <p>
-            <input type="checkbox" class="filled-in" id="Economics"/>
-            <label for="Economics">Economics</label>
-        </p>
-        <p>
-            <input type="checkbox" class="filled-in" id="Science"/>
-            <label for="Science">Science</label>
-        </p>
-        <p>
-            <input type="checkbox" class="filled-in" id="Dance" />
-            <label for="Dance">Dance</label>
-        </p>
-        <p>
-            <input type="checkbox" class="filled-in" id="Art" />
-            <label for="Art">Art</label>
-        </p>
-        <p>
-            <input type="checkbox" class="filled-in" id="Music" />
-            <label for="Music">Music</label>
-        </p>
+      <div id="myBtnContainer">
+        <div class="label">
+      Filter by Interest:
+    </div>
+      <button class="btn active" onclick="filterSelection('all')">Show all</button>
+      <button class="btn" onclick="filterSelection('econ')">Economics</button>
+      <button class="btn" onclick="filterSelection('science')">Science</button>
+      <button class="btn" onclick="filterSelection('mad')">Creative</button>
+    </div>
+
+    <div id="myBtnContainer">
+      <div class="label">
+      Filter by Date:
+    </div>
+      <button class="btn active" onclick="filterSelection('all')">None</button>
+      <button class="btn" onclick="filterSelection('today')">Today</button>
+      <button class="btn" onclick="filterSelection('week')">This Week</button>
+      <button class="btn" onclick="filterSelection('next')">Next Week</button>
+    </div>
+
+    <div id="myBtnContainer">
+      <div class="label">
+      Filter by Campus Location:
+    </div>
+      <button class="btn active" onclick="filterSelection('all')">None</button>
+      <button class="btn" onclick="filterSelection('south')">South</button>
+      <button class="btn" onclick="filterSelection('north')">North</button>
+    </div>
+
 </div>
 
+
+<!-- Portfolio Gallery Grid -->
 <div class="container">
-    <div class="row">
-       <div class="col s4 m4">
-           <div class="card small hoverable">
-              <div class="card-image">
-                <img src="http://finedininglovers.cdn.crosscast-system.com/ImageAlbum/16951/original_Baking-Utensils.jpg">
-              </div>
-              <div class="card-content">
-                  <span class="card-title grey-text text-darken-4">Cake Baking!<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
-                <p><a href="#">Explore!</a></p>
-              </div>
-            </div>
+<div class="row">
+  <div class="column mad week south">
+    <div class="card small hoverable">
+       <div class="card-image">
+         <img src="https://i.ytimg.com/vi/3RAijJpv1dc/maxresdefault.jpg">
        </div>
-           <div class="col s4 m4">
-               <div class="card small hoverable">
-                  <div class="card-image">
-                    <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAASJAAAAJDY1ODIxOTBmLTNhN2QtNDUzZi1hMjhlLTVmOWIwMTdmZWNhYw.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title grey-text text-darken-4">Speaker Series:<a href='#'><i class="material-icons right three-dots">more_vert</i></a> Economics</span>
-                    <p><a href="#">Explore!</a></p>
-                  </div>
-                </div>
-           </div>
-           <div class="col s4 m4">
-               <div class="card small hoverable">
-                  <div class="card-image">
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/141/869/non_2x/bright-bhangra-colorful-dancer-vectors.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title grey-text text-darken-4">NU Bhangra Tryouts<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
-                    <p><a href="#">Explore!</a></p>
-                  </div>
-                </div>
-           </div>
-         </div>
-         <!-- row 2 -->
-         <div class="row">
-             <div class="col s4 m4">
-                 <div class="card small hoverable">
-                    <div class="card-image">
-                      <img src="https://www.bonappetour.com/assets/images/experiences/1499331866-5980868.jpeg">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title grey-text text-darken-4">Wine & Cheese Night<a href='#'><i class="material-icons right three-dots">more_vert</i></a></span>
-                      <p><a href="#">Explore!</a></p>
-                    </div>
-                  </div>
-             </div>
-             <div class="col s4 m4">
-                 <div class="card small hoverable">
-                    <div class="card-image">
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdHM4nXXa0gwXt1nY0kFOujKayXm_5XKhCACQ-uZVtdZ1Mett">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title grey-text text-darken-4">Speaker Series: <a href='#'><i class="material-icons right three-dots">more_vert</i></a>Mathematics in Art</span>
-                      <p><a href="#">Explore!</a></p>
-                    </div>
-                  </div>
-             </div>
-             <div class="col s4 m4">
-                 <div class="card small hoverable">
-                    <div class="card-image">
-                      <img src="https://i.ytimg.com/vi/Dbu4oKahSLw/maxresdefault.jpg">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title grey-text text-darken-4">Dance the Polka!<a href='#'><i class="material-icons right three-dots">more_vert</i></a></span>
-                      <p><a href="#">Explore!</a></p>
-                    </div>
-                  </div>
-             </div>
-              </div>
+       <div class="card-content">
+           <span class="card-title grey-text text-darken-4">NU Bhangra Tryouts<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+         <p><a href="#">Explore!</a></p>
        </div>
+     </div>
+  </div>
+  <div class="column mad next north">
+    <div class="card small hoverable">
+       <div class="card-image">
+         <img src="https://fthmb.tqn.com/CEA5o9-pWt9JBJAXR2KnQyNJn-c=/960x0/filters:no_upscale()/Clay-pottery-wheel-GettyImages-522319032-58b3bd8d3df78cdcd86a2e83.jpg">
+       </div>
+       <div class="card-content">
+           <span class="card-title grey-text text-darken-4">Learn Pottery<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+         <p><a href="#">Explore!</a></p>
+       </div>
+     </div>
+  </div>
+  <div class="column econ today week north">
+    <div class="card small hoverable">
+       <div class="card-image">
+         <img src="http://provisionslibrary.com/wp-content/uploads/2012/12/images.jpg">
+       </div>
+       <div class="card-content">
+           <span class="card-title grey-text text-darken-4">Global Economy<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+         <p><a href="#">Explore!</a></p>
+       </div>
+     </div>
+  </div>
+  <div class="column econ next south">
+    <div class="card small hoverable">
+       <div class="card-image">
+         <img src="https://cdn.cnn.com/cnnnext/dam/assets/160927134912-why-the-federal-reserve-isnt-political-super-169.jpg">
+       </div>
+       <div class="card-content">
+           <span class="card-title grey-text text-darken-4">FedChallenge<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+         <p><a href="#">Explore!</a></p>
+       </div>
+     </div>
+  </div>
+  <div class="column science week south">
+    <div class="card small hoverable">
+       <div class="card-image">
+         <img src="http://robohub.org/wp-content/uploads/2017/02/grid-AI.jpg">
+       </div>
+       <div class="card-content">
+           <span class="card-title grey-text text-darken-4">Future of AI<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+         <p><a href="#">Explore!</a></p>
+       </div>
+     </div>
+  </div>
+  <div class="column science next north">
+    <div class="card small hoverable">
+       <div class="card-image">
+         <img src="https://www.unomaha.edu/college-of-arts-and-sciences/chemistry/_files/images/chemdrawing.jpg">
+       </div>
+       <div class="card-content">
+           <span class="card-title grey-text text-darken-4">Tech Science Fair<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+         <p><a href="#">Explore!</a></p>
+       </div>
+     </div>
+  </div>
+
+  <div class="column science week north">
+    <div class="card small hoverable">
+       <div class="card-image">
+         <img src="https://pbs.twimg.com/profile_images/823710529432801280/OPAr8Cob_400x400.jpg">
+       </div>
+       <div class="card-content">
+           <span class="card-title grey-text text-darken-4">BuildHer Hackathon<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+         <p><a href="#">Explore!</a></p>
+       </div>
+     </div>
+  </div>
+  <div class="column econ next south">
+    <div class="card small hoverable">
+       <div class="card-image">
+         <img src="https://www.hoozip.com/wp-content/uploads/2016/12/trumponics.jpg">
+       </div>
+       <div class="card-content">
+           <span class="card-title grey-text text-darken-4">Trumponomics<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+         <p><a href="#">Explore!</a></p>
+       </div>
+     </div>
+  </div>
+  <div class="column science today week south">
+    <div class="card small hoverable">
+       <div class="card-image">
+         <img src="http://www.astronomy.com/-/media/Images/Homepage/Sliders/heic1509a.jpg?mw=600">
+       </div>
+       <div class="card-content">
+           <span class="card-title grey-text text-darken-4">Star-Gazing<a href="#"><i class="material-icons right three-dots">more_vert</i></a></span>
+         <p><a href="#">Explore!</a></p>
+       </div>
+     </div>
+  </div>
+<!-- END GRID -->
+</div>
+</div>
+
+<!-- END MAIN -->
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
 </body>
- </html>
+</html>
